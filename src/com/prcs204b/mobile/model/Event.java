@@ -10,4 +10,8 @@ public class Event {
 	String getName() {
 		return new String(mName);
 	}
+	
+	public String toString() {
+		return new String(mName);
+	}
 }
