@@ -1,4 +1,4 @@
-package com.prcs204b.mobileprototype;
+package com.prcs204b.mobile.app;
 
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;

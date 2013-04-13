@@ -1,4 +1,4 @@
-package com.prcs204b.model;
+package com.prcs204b.mobile.model;
 
 public class Event {
 	private String mName;

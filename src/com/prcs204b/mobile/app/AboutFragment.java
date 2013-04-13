@@ -1,4 +1,4 @@
-package com.prcs204b.mobileprototype;
+package com.prcs204b.mobile.app;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
