@@ -21,16 +21,16 @@
         <TextView
 	        android:id="@+id/booked_event_title"
 	        android:layout_width="wrap_content"        
-	        android:layout_height = "wrap_content"	
-	        android:textAppearance="@android:style/TextAppearance.Medium"     
-	        android:text="Title"/>
+	        android:layout_height = "wrap_content"
+	        android:textIsSelectable="false"	
+	        android:textAppearance="@android:style/TextAppearance.Large"/>
         
         <TextView
             android:id="@+id/booked_event_qty"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-             android:textStyle="italic"
-             android:text="Qty"/>  
+            android:textStyle="italic"
+            android:textIsSelectable="false"/>  
         
     </LinearLayout>
     
