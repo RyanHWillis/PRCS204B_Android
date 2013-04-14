@@ -18,6 +18,11 @@ public class MyBookingsFragment extends Fragment {
 	{
 		public MyBookingsAdapter(Context context, int textViewResourceId) {
 			super(context, textViewResourceId);
+		}
+		
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			return super.getView(position, convertView, parent);
 		}		
 	}
 	

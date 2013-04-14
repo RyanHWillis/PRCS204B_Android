@@ -4,6 +4,7 @@
 	
     <!-- My Bookings Strings. -->
     <string name="no_bookings_message">Go to "Events" to make a booking.</string>
+    <string name="booking_listitem_content_description">Event preview</string>
     
     
 </resources>
