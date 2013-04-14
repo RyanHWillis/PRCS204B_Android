@@ -31,8 +31,8 @@ public class MainActivity extends FragmentActivity
 		mViewPager.setOnPageChangeListener(
 				new ViewPager.SimpleOnPageChangeListener() {
 					@Override
-					public void onPageSelected(int position) {						
-						getActionBar().setSelectedNavigationItem(position);
+					public void onPageSelected(int position) {		
+						getActionBar().setSelectedNavigationItem(position);	
 						
 					}
 				});
@@ -99,7 +99,8 @@ public class MainActivity extends FragmentActivity
 
 		@Override
 		public void onTabSelected(Tab tab, FragmentTransaction ft) {
-			mViewPager.setCurrentItem(tab.getPosition());			
+			mViewPager.setCurrentItem(tab.getPosition());
+			
 		}
 
 		@Override

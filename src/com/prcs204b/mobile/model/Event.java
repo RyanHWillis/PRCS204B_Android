@@ -7,7 +7,7 @@ public class Event {
 		mName = name;
 	}
 	
-	String getName() {
+	public String getName() {
 		return new String(mName);
 	}
 	

@@ -19,7 +19,8 @@ public class MyBookingsFragment extends Fragment {
 	
 	static class BookingHolder { 
 		ImageView bookingIcon;
-		TextView  bookingText;
+		TextView  bookingTitle;
+		TextView  bookingQuantity;
 	}
 	
 	private class MyBookingsAdapter extends ArrayAdapter<Booking>
@@ -51,7 +52,8 @@ public class MyBookingsFragment extends Fragment {
 			
 				holder = new BookingHolder();
 				holder.bookingIcon = (ImageView)row.findViewById(R.id.booked_event_display);
-				holder.bookingText = (TextView)row.findViewById(R.id.booked_event_title_qty);
+				holder.bookingTitle = (TextView)row.findViewById(R.id.booked_event_title);
+				holder.bookingQuantity = (TextView)row.findViewById(R.id.booked_event_qty);
 				
 				row.setTag(holder);
 			
@@ -60,7 +62,9 @@ public class MyBookingsFragment extends Fragment {
 			}
 			
 			Booking booking = getItem(position);
-			holder.bookingText.setText(booking.toString());
+			
+			holder.bookingTitle.setText( booking.getEvent().getName() );
+			holder.bookingQuantity.setText( "Quantity: " + booking.getQuantity());
 			holder.bookingIcon.setImageResource(android.R.drawable.btn_star);
 			
 			return row;

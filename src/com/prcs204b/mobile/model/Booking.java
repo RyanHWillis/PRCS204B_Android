@@ -15,11 +15,11 @@ public class Booking {
 		this.mQuantity = quantity;
 	}
 	
-	int getQuantity() { 
+	public int getQuantity() { 
 		return mQuantity;
 	}
 	
-	Event getEvent() {
+	public Event getEvent() {
 		return mEvent;
 	}
 	
