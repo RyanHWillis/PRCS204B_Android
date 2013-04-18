@@ -1,5 +1,14 @@
 <resources>
 
     <string name="app_name">PRCS204 Mobile Prototype</string>
+    
+    <!--  About View Strings !-->
+    <string name="about_header">About:</string>
+    <string name="about_blurb">Adaline Theatre House opened in 2007 in a beautiful wooded glade close to the lake in the
+grounds of Kilworth House Hotel in south Leicestershire. There\'s a special aura and magic
+about open-air theatre on a beautiful English summer\’s evening, so what better way to experience that magic than amidst the magnificent surroundings of the Kilworth estate, 
+enjoying a professional production of a standard rarely seen outside the West End of London.</string>
+        
+    
 
 </resources>
