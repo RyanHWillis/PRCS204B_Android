@@ -38,7 +38,6 @@ public class MyBookingsFragment extends Fragment {
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			
-			
 			View row = convertView;
 			BookingHolder holder;
 			
@@ -65,7 +64,7 @@ public class MyBookingsFragment extends Fragment {
 			
 			holder.bookingTitle.setText( booking.getEvent().getName() );
 			holder.bookingQuantity.setText( "Quantity: " + booking.getQuantity());
-			holder.bookingIcon.setImageResource(android.R.drawable.btn_star);
+			holder.bookingIcon.setImageResource(android.R.drawable.ic_menu_day);
 			
 			return row;
 		}

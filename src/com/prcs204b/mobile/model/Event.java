@@ -4,9 +4,10 @@ public class Event {
 	private String mName;
 	
 	public Event(String name) {
-		mName = name;
+		this.mName = name;
 	}
 	
+
 	public String getName() {
 		return new String(mName);
 	}
@@ -14,4 +15,6 @@ public class Event {
 	public String toString() {
 		return new String(mName);
 	}
+	
+	
 }
