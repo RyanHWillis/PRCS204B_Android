@@ -1,6 +1,5 @@
 <resources>
 
-    <string name="app_name">PRCS204B Android</string>
 	
     <!-- My Bookings Strings. -->
     <string name="no_bookings_message">Go to "Events" to make a booking.</string>
