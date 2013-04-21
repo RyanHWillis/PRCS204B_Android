@@ -21,7 +21,7 @@ public class EventsFragment extends Fragment {
 	static class EventHolder { 
 		ImageView eventIcon;
 		TextView  eventTitle;
-		
+		TextView  eventDescription;
 	}
 	
 	private class EventsAdapter extends ArrayAdapter<Event>
@@ -53,7 +53,8 @@ public class EventsFragment extends Fragment {
 				holder = new EventHolder();
 				holder.eventIcon = (ImageView)row.findViewById(R.id.event_event_display);
 				holder.eventTitle = (TextView)row.findViewById(R.id.event_event_title);
-			
+				holder.eventDescription = (TextView)row.findViewById(R.id.booked_event_qty);
+
 				
 				row.setTag(holder);
 			
@@ -64,7 +65,7 @@ public class EventsFragment extends Fragment {
 			Event event = getItem(position);
 			
 			holder.eventTitle.setText( event.getName());
-			
+			holder.eventDescription = (TextView)row.findViewById(R.id.booked_event_qty);
 			holder.eventIcon.setImageResource(android.R.drawable.btn_star);
 			
 			return row;

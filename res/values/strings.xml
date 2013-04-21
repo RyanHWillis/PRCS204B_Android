@@ -6,7 +6,8 @@
     <string name="booking_listitem_content_description">Event preview</string>
     
     
-    <string name="app_name">PRCS204 Mobile Prototype</string>
+    <string name="app_name">Adaline Theatre House</string>
+    <string name="adalinelogo">Adaline Theatre House Logo</string>
     
     <!--  About View Strings !-->
     <string name="about_header">About:</string>
@@ -15,6 +16,12 @@ grounds of Kilworth House Hotel in south Leicestershire. There\'s a special aura
 about open-air theatre on a beautiful English summer\’s evening, so what better way to experience that magic than amidst the magnificent surroundings of the Kilworth estate, 
 enjoying a professional production of a standard rarely seen outside the West End of London.</string>
         
-    
-
+   <!-- Log In Strings --> 
+   
+   <string name="logininfoid">To view your personal bookings and events, please enter your email and password:</string>
+   <string name="emailaddresstxt">Email Address:</string>
+   <string name="passwordtxt">Password:</string>
+   <string name="signinbtn">Sign In!
+       </string>
+   
 </resources>
