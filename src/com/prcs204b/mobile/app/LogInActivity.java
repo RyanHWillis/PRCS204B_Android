@@ -12,12 +12,15 @@ import org.json.JSONObject;
 import com.prcs204b.mobile.model.Customer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LogInActivity extends Activity implements Runnable,
@@ -25,26 +28,31 @@ public class LogInActivity extends Activity implements Runnable,
 
 	Button clickedButton = null;
 	private static final String activityName = "PRCSB_LogIn";
-
+	Handler msg;
+	TextView invalidLogin;
+	TextView successTxt;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-		
+	
 		Button signInBtn = (Button)findViewById(R.id.signInBtn);
 		signInBtn.setOnClickListener(this);
+		
+		msg = new Handler(); 
 	}
 
 	String webServiceURL = "http://chidell.com:8080/PRCS204B_Middleware/webresources/customer_login";
-
+	
 	@Override
 	public void onClick(View v) {
 		
 
 		if (v.getId() == R.id.signInBtn)
 		{
-			Toast.makeText(this, "Look in the LogCat Window", 
+			Toast.makeText(this, "Connecting", 
 					       Toast.LENGTH_SHORT).show();
 			
 			
@@ -112,6 +120,18 @@ public class LogInActivity extends Activity implements Runnable,
 			if (customerObj.length() == 0)
 			{
 				Log.d(activityName, "Invalid!");
+				
+				
+				msg.post(new Runnable() {
+					
+					@Override
+					public void run() {
+						
+						Toast toast = Toast.makeText(LogInActivity.this, "Invalid Login, Please try again!", Toast.LENGTH_SHORT);
+						toast.show();
+						
+					}
+				});
 			}
 			else
 			{
@@ -129,6 +149,22 @@ public class LogInActivity extends Activity implements Runnable,
 				c.setTelephoneNumber( customerObj.getString("telNo"));
 				
 				Log.d(activityName, "Success!");
+				
+				msg.post(new Runnable() {
+					
+					@Override
+					public void run() {
+
+						Toast toast = Toast.makeText(LogInActivity.this, "Success!", Toast.LENGTH_SHORT);
+						toast.show();
+						
+						Intent launchMain = new Intent(LogInActivity.this, MainActivity.class);
+						LogInActivity.this.startActivity(launchMain);
+						
+					}
+				});
+				
+				
 			}
 
 				
@@ -152,5 +188,6 @@ public class LogInActivity extends Activity implements Runnable,
 		Log.i(activityName, "Thread finished");
 
 	}
-
+	
+	
 }

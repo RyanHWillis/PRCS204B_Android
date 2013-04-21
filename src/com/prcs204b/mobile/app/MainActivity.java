@@ -1,20 +1,28 @@
 package com.prcs204b.mobile.app;
-
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.support.v4.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-public class MainActivity extends FragmentActivity 
+public class MainActivity extends FragmentActivity implements OnClickListener
 {	
 	private MainPagerAdapter mPagerAdapter;
+	Button signOutBtn;
 	
 	private static final String TAB_POSITION_NAME = "MainTabPosition"; 
+	Intent intent;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,6 +33,9 @@ public class MainActivity extends FragmentActivity
 		// Create the ViewPager adapter
 		mPagerAdapter = new MainPagerAdapter(
 				getSupportFragmentManager());
+		
+		
+		intent = new Intent();
 		
 		// Get the view pager
 		ViewPager mViewPager = (ViewPager)findViewById(R.id.pager);
@@ -146,6 +157,37 @@ public class MainActivity extends FragmentActivity
 		public int getCount() {			
 			return NUM_FRAGMENTS;
 		}
+		
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+		getMenuInflater().inflate(R.menu.menu, menu);	
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.logoutMenu:
+	        	finish();	
+	            return true;
+	        
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}
+
+	
+	
+	@Override
+	public void onClick(View v) {
+		if(v.getId() == R.id.logoutMenu){
+    		Intent intent = new Intent(this, LogInActivity.class);
+    		this.startActivity(intent);
+    	}
 		
 	}
 }

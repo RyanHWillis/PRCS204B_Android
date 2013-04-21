@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item
+	android:id="@+id/logoutMenu"
+	android:title="@string/signout"
+	android:orderInCategory="2"
+	android:showAsAction="never"/>
+	
+</menu>	

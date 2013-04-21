@@ -1,10 +1,12 @@
 <resources>
 
+	<!-- Main Activity. -->
+	
 	
     <!-- My Bookings Strings. -->
     <string name="no_bookings_message">Go to "Events" to make a booking.</string>
     <string name="booking_listitem_content_description">Event preview</string>
-    
+    <string name="signout">Sign Out</string>
     
     <string name="app_name">Adaline Theatre House</string>
     <string name="adalinelogo">Adaline Theatre House Logo</string>
